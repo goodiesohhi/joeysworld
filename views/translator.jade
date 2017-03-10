@@ -1,9 +1,51 @@
 extends layout
+
 head
-  link(rel='stylesheet', href='/stylesheets/style.css')
+  
+ 
+ 
+
+ 
 body
+ 
+   
+    
   block content
-	script.
-		var input
+    script.
+      window.onload = function() {
+      
+       var ans1= "poop"
+       var inputvar ="yoog"
+       setInterval(function(){ 
+       ans1 = document.getElementById('inputbox');
+       inputvar = ans1.value;
+       inputvar = inputvar.replace(/harpy/gi, "winged aerobics instructor");
+       inputvar = inputvar.replace(/harpies/gi, "winged aerobics instructors");
+       inputvar = inputvar.replace(/yugi/gi, "Yoog");
+       inputvar = inputvar.replace(/this/gi, "dis");
+       inputvar = inputvar.replace(/that/gi, "dat");
+       inputvar = inputvar.replace(/saur/gi, "saw");
+       inputvar = inputvar.replace(/'s/gi, "z");
+       inputvar = inputvar.replace(/got a/gi, "gotta");
+       inputvar = inputvar.replace(/has/gi, "haz");
+       inputvar = inputvar.replace(/ing /gi, "in'");
+       inputvar = inputvar.replace(/my/gi, "ma");
+       inputvar = inputvar.replace(/you/gi, "yooz");
+       inputvar = inputvar.replace(/ar/gi, "aw");
+       inputvar = inputvar.replace(/ and /gi, " n' ");
+       inputvar = inputvar.replace(/though/gi, "tho");
+       inputvar = inputvar.replace(/through/gi, "thru");
+       inputvar = inputvar.replace(/the/gi, "da");
+
+       inputvar = inputvar+ " Nyeh."
+       
+       document.getElementById('outputbox').value = inputvar
+       }, 100);
+      };
     h1= title
     p Ya aint speakin english until Joey senpai teach ya da real brooklyn accent!
+   
+    textarea(type='textarea', name='input', id = 'inputbox', value='Start Typing....', class="form-control",rows="10"   )
+     
+    textarea(type='textarea', name='output', id = 'outputbox', value='Start Typing....', readonly, class="form-control", rows="10"   )
+
